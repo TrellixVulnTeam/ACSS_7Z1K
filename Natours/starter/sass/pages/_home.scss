@@ -2,6 +2,11 @@
     background-color: $color-grey-light-1;
     padding: 25rem 0;
     margin-top: -20vh;
+
+    @include respond(tab-port) {
+        padding-top: 25rem;
+        padding-bottom: 40rem;
+    }
 }
 
 .section-features {
@@ -17,17 +22,28 @@
     & > * {
         transform: skewY(7deg);
     }
+
+    @include respond(tab-port) {
+        padding: 10rem 0;
+    }
 }
 
 .section-tours {
     background-color: $color-grey-light-1;
     padding: 25rem 0 15rem 0;
     margin-top: -20rem;
+
+    @include respond(tab-port) {
+        padding: 20rem 0;
+    }
 }
 
 .section-stories {
     padding: 15rem 0;
     position: relative;
+    @include respond(tab-port) {
+        padding: 10rem 0;
+    }
 }
 
 .section-book {
@@ -46,8 +62,21 @@
     box-shadow: 0 2rem 4rem rgba($color-black, .15);
     height: 55rem;
 
+    @include respond(tab-land) {
+        // margin: 0 auto;
+        // width: 80%;
+    }
+    @media (max-width:43.75em) {
+        background-image: url('../img/nat-10.jpg');
+    }
+
     &__form {
         width: 50%;
         padding: 6rem;
+        @media (max-width:700px) {
+            width: 100%;
+            background-color: rgba($color-white, .8);
+            height: inherit;
+        }
     }
 }

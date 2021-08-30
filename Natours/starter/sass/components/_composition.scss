@@ -32,6 +32,13 @@
         }
     }
 
+    @include respond(tab-port) {
+        margin-bottom: 20rem;
+    }
+    @include respond(phone) {
+        margin-bottom: 8rem;
+    }
+
     &:hover &__photo:not(:hover) {
         transform: scale(.95);
         transform: translateY(-1rem);
